@@ -55,11 +55,11 @@ InfoStoreAdd terminal x-terminal-emulator
 # actions that are run after a restart.
 DestroyFunc StartFunction
 AddToFunc   StartFunction
-+ I Test (Init, f $[FVWM_USERDIR]/.BGdefault) \
++ I Test (f $[FVWM_USERDIR]/.BGdefault) \
     Exec exec fvwm-root $[FVWM_USERDIR]/.BGdefault
 + I TestRc (NoMatch) Exec exec fvwm-root \
     $[FVWM_DATADIR]/default-config/images/background/bg1.png
-+ I Test (Init) Module FvwmBanner
++ I Test (Init) Module FvwmBanner images/fvwm-logo.svg
 + I Module FvwmButtons RightPanel
 + I Module FvwmEvent EventNewDesk
 
@@ -319,6 +319,7 @@ Test (x vlc) + "VLC" Exec exec vlc
 # Menu icons are located in ~/.fvwm/images/bgicons/
 DestroyMenu BGMenu
 AddToMenu   BGMenu "Wallpapers" Title
++ "Debian%images/bgicons/debian.png%" SetBG d1ebian.png
 + "Floral%bgicons/bg1.png%" SetBG bg1.png
 + "Circles%bgicons/bg2.png%" SetBG bg2.png
 + "Space%bgicons/bg3.png%" SetBG bg3.png
